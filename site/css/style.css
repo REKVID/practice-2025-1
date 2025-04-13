@@ -1,28 +1,157 @@
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     line-height: 1.6;
+    color: #333;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
+/* Навигация */
+.main-nav {
+    background-color: #2c3e50;
+    padding: 1rem 0;
 }
 
-.logo {
-    max-width: 200px;
-    height: auto;
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #34495e;
+}
+
+/* Основной контент */
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
-footer {
+section {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
     text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-    border-top: 1px solid #eee;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 1.5rem;
+}
+
+/* Карточки на главной */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.highlight-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Команда */
+.team-member {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.member-role {
+    color: #666;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+/* Журнал */
+.journal-entry {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.entry-meta {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.entry-meta time {
+    margin-right: 1rem;
+}
+
+/* Ресурсы */
+.resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-list li {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.resource-list a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resource-list a:hover {
+    text-decoration: underline;
+}
+
+/* Подвал */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1rem;
+    }
 } 
